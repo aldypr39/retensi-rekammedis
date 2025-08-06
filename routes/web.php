@@ -24,4 +24,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+
+Route::middleware('auth')->group(function () {
+    Route::resource('bundles', BundleController::class)->only(['index','show']);
+});
+
 require __DIR__.'/auth.php';

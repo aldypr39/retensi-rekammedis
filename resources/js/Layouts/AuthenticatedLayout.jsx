@@ -30,6 +30,13 @@ export default function AuthenticatedLayout({ header, children }) {
                                 >
                                     Dashboard
                                 </NavLink>
+
+                                <NavLink
+                                    href={route('bundles.index')}
+                                    active={route().current('bundles.index') || route().current('bundles.show')}
+                                >
+                                    Ikatan
+                                </NavLink>
                             </div>
                         </div>
 
